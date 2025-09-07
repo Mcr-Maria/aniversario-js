@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felicitação de Aniversário</title>
+    <style>
+    
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            flex-direction: column;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Mensagem de Aniversário</h2>
+    <p>Digite o nome do aniversariante:</p>
+    <div>
+        <input type="text" id="nomeAniversariante" placeholder="Aniversariante">
+        <button id="botaoEnviar">Enviar Parabéns</button>
+    </div>
+
+    <script>
+        
+        const botao = document.getElementById('botaoEnviar');
+        const campoNome = document.getElementById('nomeAniversariante');
+
+     
+        botao.addEventListener('click', function() {
+            
+            const nome = campoNome.value;
+
+        
+            if (nome.trim() !== "") {
+              
+                const mensagem = `Feliz aniversário, ${nome}! Desejamos tudo de melhor para você! 🎉🎂`;
+                alert(mensagem);
+            } else {
+               
+                alert("Por favor, digite um nome antes de enviar.");
+            }
+        });
+    </script>
+
+</body>
+</html>
